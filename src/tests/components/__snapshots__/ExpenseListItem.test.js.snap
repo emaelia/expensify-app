@@ -5,17 +5,17 @@ exports[`Should render ExpenseListItem correctly 1`] = `
   className="expense"
 >
   <[object Object]
-    to="/edit/2"
+    to="/edit/1"
   >
     <h3>
-      Rent
+      Gum
     </h3>
   </[object Object]>
   <p>
     Amount: 
-    109500
-     - Date: 
-    -345600000
+    $1.95
+    - Date: 
+    1st Jan 70
   </p>
 </div>
 `;
