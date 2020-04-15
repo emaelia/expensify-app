@@ -11,9 +11,10 @@ export const startAddExpense = (expenseData = {} ) => {
 	return (dispatch) => {
 		const {
 			description = '',
-			note = '', 
-			amount = 0, 
-			createdAt = 0
+			note = '',
+			createdAt = 0, 
+			amount = 0
+			
 		} = expenseData;
 
 		const expense = { description, note, amount, createdAt };
