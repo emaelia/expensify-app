@@ -9,7 +9,7 @@ import * as firebase from 'firebase';
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
  };
 
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(config);
 
   const database = firebase.database();
 
