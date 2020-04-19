@@ -24,7 +24,7 @@ exports[`Should render ExpenseList with expenses 1`] = `
     description="Water"
     id="3"
     key="3"
-    note=""
+    note="For cleaning and drinking"
   />
 </div>
 `;
