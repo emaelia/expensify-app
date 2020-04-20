@@ -36,6 +36,21 @@ export const removeExpense = ( { id } = {} ) => (
 		id
 });
 
+export const startRemoveExpense = ( { id } = {} ) => {
+	return (dispatch) => {
+		
+	return 	database.ref(`expenses/${id}`).remove().then(() => {
+			dispatch(removeExpense({ id }))
+		});
+	};
+};
+
+// return firebase.database().ref('items').child('ITEM_KEY').remove();
+//Create new action -removes expense by id
+//test startremoveexpense 'should remove expenses from firebase'
+//use startremoveexpense in editexpensepage (instead of removeexpense)
+//adjust editexpensepage tests
+
 //EDIT_EXPENSE 
 export const editExpense = ((id, updates) => ({
 	type: 'EDIT_EXPENSE',
@@ -62,9 +77,7 @@ export const startSetExpenses = () => {
 				});
 			});
 			dispatch(setExpenses(expenses));
-		});
-	
-	
+		});	
 	};
 };
 
