@@ -1,0 +1,1 @@
+export default [{uid: 123},{uid: 124},{uid: 125}];

@@ -76,6 +76,7 @@ test('Should edit expense from firebase', () => {
 	}).then((snapshot) => {
 		expect(snapshot.val().amount).toBe(updates.amount);
 		done();
+
 	});
 });
 
