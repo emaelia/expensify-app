@@ -5,5 +5,10 @@ exports[`Should render ExpenseDashboardPage correctly 1`] = `
   <[object Object] />
   <[object Object] />
   <[object Object] />
+  <div
+    className="show-for-desktop"
+  >
+    <[object Object] />
+  </div>
 </div>
 `;

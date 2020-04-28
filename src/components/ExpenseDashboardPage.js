@@ -5,9 +5,13 @@ import ExpenseSummary from './ExpenseSummary';
 
 const ExpenseDashboardPage = () => (
 	<div>
+		
 		<ExpenseSummary />
-		<ExpenseList />
 		<ExpenseListFilters />
+		<ExpenseList />
+		<div className="show-for-desktop">
+			<ExpenseListFilters />
+		</div>
 	</div>
 
 );
