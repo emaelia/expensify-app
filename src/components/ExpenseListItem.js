@@ -5,7 +5,8 @@ import numeral from 'numeral';
 
 const ExpenseListItem = ({ amount, description, createdAt, id }) => (
 	
-		<Link className="list-item" to={`/edit/${id}`} >
+		<Link className="list-item tooltip" to={`/edit/${id}`} >
+		
 			<div>
 				<h3 className="list-item__title">
 					{description}
@@ -14,7 +15,7 @@ const ExpenseListItem = ({ amount, description, createdAt, id }) => (
 					Date: {moment(createdAt).format('Do MMM YYYY')}
 				</span>
 			</div>
-			
+			<span className="tooltiptext">Click to edit</span>
 			<h3 className="list-item__data">
 				{numeral( amount / 100 ).format('$0,0.00')} 
 			</h3>

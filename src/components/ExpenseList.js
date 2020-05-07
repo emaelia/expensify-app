@@ -13,8 +13,9 @@ export const ExpenseList = (props) => (
 		<div className="list-body">
 		{
 			props.expenses.length === 0 ? (
-					<div className="list-item list-item--message">
-						<span>No Expenses Yet</span>
+					<div className="list-item list-item--message tooltip">
+						<span>No Expenses yet</span>
+						<span className="tooltiptext">Add an expense or adjust filters to get started</span>
 					</div>
 					
 				) : (
