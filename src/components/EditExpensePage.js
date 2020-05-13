@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import { confirmDialogue, startConfirmDialogue } from '../actions/dialogues';
 import ExpenseForm from './ExpenseForm';
 
 export class EditExpensePage extends React.Component {
@@ -16,6 +17,11 @@ export class EditExpensePage extends React.Component {
 				this.props.history.push('/');
 	};
 
+	confirmDialogue = () => {
+		this.props.startConfirmDialogue("Permenantly remove this expense?",this.onRemove);
+		
+};
+
 	render() {
 		return (
 			
@@ -30,7 +36,7 @@ export class EditExpensePage extends React.Component {
 						expense={this.props.expense}
 						onSubmit={this.onSubmit}
 					/>
-					<button className="button button--secondary" onClick={this.onRemove}>
+					<button className="button button--secondary" onClick={this.confirmDialogue}>
 						Remove {this.props.expense.description}
 					</button>
 				</div>
@@ -54,7 +60,8 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => ({
 		startEditExpense: (id, expense) => dispatch(startEditExpense(id, expense)),
-		startRemoveExpense: (data) => dispatch(startRemoveExpense(data))
+		startRemoveExpense: (data) => dispatch(startRemoveExpense(data)),
+		startConfirmDialogue: (dText, action) => dispatch(startConfirmDialogue(dText, action))
 });
 
 
